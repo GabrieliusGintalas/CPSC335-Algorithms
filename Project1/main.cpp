@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "left-to-right.h"
 
 using namespace std;
 
@@ -21,12 +22,19 @@ int main(){
     cin >> count;
     vector<string> Discs = CreateDiscs(count);
     cout << "You have entered " << Discs.size() << endl;
+    cout << "Alternating discs: ";
     for(int i = 0; i < Discs.size(); i++){
         cout << Discs[i] << " ";
     }
     cout << endl;
 
+    LeftToRightSort(Discs);
 
+    cout << "Using left-to-right algorithm: ";
+    for(int i = 0; i < Discs.size(); i++){
+        cout << Discs[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
