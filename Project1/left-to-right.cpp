@@ -1,19 +1,17 @@
 #include <iostream>
 #include <vector>
 #include "left-to-right.h"
+#include "swapVar.h"
 
 using namespace std;
 
-void SwapValues(string& a, string& b){
-    string temp = a;
-    a = b;
-    b = temp;
-}
-
-
+//Left-to-right algorithm
 void LeftToRightSort(vector<string>& discs){
+    //Looking through all elements in the vector
     for(int i = 0; i < discs.size() - 1; i++){
+        //Comparing i element with every element in the vector
         for(int j = 0; j < discs.size() - 1; j++){
+            //If dark is before light, switch them around in the vector
             if(discs[j] == "Dark" && discs[j + 1] == "Light"){
                 SwapValues(discs[j+1], discs[j]);
             }

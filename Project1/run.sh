@@ -1,12 +1,22 @@
 #!/bin/bash
 
+# Delete the existing 'main' executable if it exists
+if [ -f "main" ]; then
+    rm main
+    echo "Deleted main."
+fi
+
 # Compile the code
-g++ main.cpp left-to-right.cpp -o main
+echo "Compiling..."
+g++ main.cpp left-to-right.cpp lawnmower.cpp swapVar.cpp -o main
 
 # Check if compilation succeeded
 if [ $? -eq 0 ]; then
+    echo "Compilation successful. Running the program..."
     # Execute the compiled program
     ./main
 else
     echo "Compilation failed."
 fi
+
+
