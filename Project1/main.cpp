@@ -2,7 +2,6 @@
 #include <vector>
 #include "left-to-right.h"
 #include "lawnmower.h"
-#include "swapVar.h"
 
 using namespace std;
 

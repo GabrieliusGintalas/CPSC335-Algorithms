@@ -8,7 +8,7 @@ fi
 
 # Compile the code
 echo "Compiling..."
-g++ main.cpp left-to-right.cpp lawnmower.cpp swapVar.cpp -o main
+g++ main.cpp left-to-right.cpp lawnmower.cpp -o main
 
 # Check if compilation succeeded
 if [ $? -eq 0 ]; then

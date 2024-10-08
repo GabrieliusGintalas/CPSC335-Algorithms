@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "left-to-right.h"
-#include "swapVar.h"
 
 using namespace std;
 
@@ -13,7 +12,10 @@ void LeftToRightSort(vector<string>& discs){
         for(int j = 0; j < discs.size() - 1; j++){
             //If dark is before light, switch them around in the vector
             if(discs[j] == "Dark" && discs[j + 1] == "Light"){
-                SwapValues(discs[j+1], discs[j]);
+                //Swapping the two values
+                string temp = discs[j+1];
+                discs[j+1] = discs[j];
+                discs[j] = temp;
             }
         }
     }
